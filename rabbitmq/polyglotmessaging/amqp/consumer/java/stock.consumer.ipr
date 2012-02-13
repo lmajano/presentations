@@ -193,15 +193,15 @@
     <mapping directory="" vcs="" />
   </component>
   <component name="libraryTable">
-    <library name="Maven: com.rabbitmq:amqp-client:2.6.0">
+    <library name="Maven: com.rabbitmq:amqp-client:2.7.1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/2.6.0/amqp-client-2.6.0.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/2.7.1/amqp-client-2.7.1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/2.6.0/amqp-client-2.6.0-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/2.7.1/amqp-client-2.7.1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/2.6.0/amqp-client-2.6.0-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/2.7.1/amqp-client-2.7.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: commons-cli:commons-cli:1.1">
