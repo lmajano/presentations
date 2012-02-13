@@ -12,4 +12,6 @@ run: $(VIRTUAL_ENV_NAME)
 
 demo_env:
 	$(VIRTUAL_ENV_CMD) $(VIRTUAL_ENV_NAME)
-	$(PIP_CMD) -E $(VIRTUAL_ENV_NAME) install -e git+http://github.com/majek/puka.git#egg=puka
+	$(PIP_CMD) -E $(VIRTUAL_ENV_NAME) install puka 
+	
+## -e "git+http://github.com/majek/puka.git#egg=puka"

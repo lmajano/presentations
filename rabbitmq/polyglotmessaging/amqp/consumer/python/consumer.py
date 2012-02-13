@@ -11,12 +11,12 @@ def msg_loop(client, consume_promise, flag):
         client.basic_ack(result)
 
 # Connect to the broker
-client = puka.Client("amqp://localhost")
+client = puka.Client("amqp://127.0.0.1")
 promise = client.connect()
 client.wait(promise)
 
 # Declare the queue
-promise = client.queue_declare(queue=queue_name, exclusive=True)
+promise = client.queue_declare(queue=queue_name)
 client.wait(promise)
 
 # Start the consumer
