@@ -4,11 +4,11 @@ var amqp        = require('amqp');
 var node_static = require('node-static');
 var util        = require('util');
 
-var sockjs_opts = {sockjs_url: "http://sockjs.github.com/sockjs-client/sockjs-latest.min.js"};
+var sockjs_opts = {sockjs_url: "http://cdn.sockjs.org/sockjs-0.2.min.js"};
 
 // Sock JS Server
-var stocks_server = new sockjs.Server(sockjs_opts);
-stocks_server.on('open', function(client) {
+var stocks_server = sockjs.createServer(sockjs_opts);
+stocks_server.on('connection', function(client) {
     amqp_connect(client);
 });
 
@@ -23,7 +23,7 @@ function amqp_connect(client) {
                          function(queue) {
                              queue.bind('amq.direct', 'stock.prices');
                              queue.subscribe(function(message) {
-                                 client.send(message.data.toString());
+                                 client.write(message.data.toString());
                              });
                          });
     });
