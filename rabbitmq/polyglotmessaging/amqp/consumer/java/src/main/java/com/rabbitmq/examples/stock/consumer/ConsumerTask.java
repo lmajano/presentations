@@ -10,14 +10,6 @@ final class ConsumerTask implements Runnable {
     }
 
     public void run() {
-        while(!Thread.interrupted()) {
-            try {
-                QueueingConsumer.Delivery delivery = this.consumer.nextDelivery();
-                String message = new String(delivery.getBody());
-                System.out.println(message);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        }
+
     }
 }
